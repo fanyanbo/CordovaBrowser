@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/jump_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Jump" /> 
+
+    <EditText
+        android:id="@+id/content_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/jump_url"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:text="http://beta.webapp.skysrt.com/fyb/webapp/index.html" >
+        <requestFocus />
+    </EditText>
+<!--     http://beta.webapp.skysrt.com/fyb/webapp/index.html -->
+<!--     android:text="http://172.20.115.113:8080/ngbh/index.html" -->
+<!-- http://beta.webapp.skysrt.com/webappdemo/index.html -->
+<!-- http://122.97.219.200/webapp_v2/xlzq/index.html -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/jump_url"
+        android:layout_below="@+id/jump_url"
+        android:text="Jump1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:text="Jump2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:text="Jump3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_below="@+id/button3"
+        android:text="Jump4" /> 
+
+</RelativeLayout>

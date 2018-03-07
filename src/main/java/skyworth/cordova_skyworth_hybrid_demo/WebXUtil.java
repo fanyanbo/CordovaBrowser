@@ -6,9 +6,7 @@ package skyworth.cordova_skyworth_hybrid_demo;
  */
 public class WebXUtil {
 
-    /**
-     * Add int.
-     *
+    /*
      * @param x the x
      * @param y the y
      * @return the int

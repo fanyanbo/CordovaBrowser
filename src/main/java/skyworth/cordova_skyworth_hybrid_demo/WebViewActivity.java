@@ -33,10 +33,16 @@ public class WebViewActivity extends CordovaExtActivity
     public void onSuperCmdInit() {
         url = getIntent().getStringExtra("url");
         mode = getIntent().getIntExtra("mode", 1);
-        Log.i(mTag, "SecondActivity url:" + url + ",mode:" + mode);
+        Log.i(mTag, "WebViewActivity url:" + url + ",mode:" + mode);
 
-        url = "http://beta.webapp.skysrt.com/appstore/webxtest/test3/test.html";
-        loadUrl(url);
+        if(mode == 0) {
+            loadUrl(url);
+        }else if(mode == 1) {
+            loadUrl(url,true,true,null);
+        }else{
+
+        }
+
     }
 
     @Override

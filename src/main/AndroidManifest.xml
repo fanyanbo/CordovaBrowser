@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WebViewActivity">
+        <activity
+            android:name=".WebViewActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="com.coocaa.webview.test" />
                 <category android:name="android.intent.category.DEFAULT" />

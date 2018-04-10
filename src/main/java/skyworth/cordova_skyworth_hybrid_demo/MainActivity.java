@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,7 +23,12 @@ public class MainActivity extends SkyActivity {
     private TCSystemService mSystemApi;
     private Button btn;
     private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
     private EditText editText;
+    private CheckBox cb;
+    private boolean mIsChecked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,15 @@ public class MainActivity extends SkyActivity {
         Log.i(mTag,"MainActivity onCreate");
 
         editText = (EditText)findViewById(R.id.content_url);
+        cb = (CheckBox)findViewById(R.id.checkBox);
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Log.i(mTag,"onCheckedChanged isChecked = " + isChecked);
+                mIsChecked = isChecked;
+            }
+        });
+
         btn = (Button)findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +56,11 @@ public class MainActivity extends SkyActivity {
                 Log.i(mTag,"onClick!!! url = " + urlcontent);
                 if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
                 {
-                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    Intent mIntent = new Intent("com.coocaa.webview.test1");
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mIntent.putExtra("url", urlcontent);
                     mIntent.putExtra("mode", 0);
+                    mIntent.putExtra("cache", mIsChecked);
                     startActivity(mIntent);
                 }
                 else
@@ -54,11 +71,12 @@ public class MainActivity extends SkyActivity {
         });
 
         btn1 = (Button)findViewById(R.id.button1);
+        btn1.setText("启动活动页");
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String urlcontent = editText.getText().toString();
+                String urlcontent = "http://beta.webapp.skysrt.com/appstore/webxtest/test7/test.html";
                 Log.i(mTag,"onClick!!! url = " + urlcontent);
                 if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
                 {
@@ -66,6 +84,79 @@ public class MainActivity extends SkyActivity {
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mIntent.putExtra("url", urlcontent);
                     mIntent.putExtra("mode", 1);
+                    mIntent.putExtra("cache", mIsChecked);
+                    startActivity(mIntent);
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "url is not illigel", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btn2 = (Button)findViewById(R.id.button2);
+        btn2.setText("启动新本机信息");
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String urlcontent = "http://beta.webapp.skysrt.com/lxw/ceshi/nativeinfo2/index.html";
+                Log.i(mTag,"onClick!!! url = " + urlcontent);
+                if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
+                {
+                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mIntent.putExtra("url", urlcontent);
+                    mIntent.putExtra("mode", 1);
+                    mIntent.putExtra("cache", mIsChecked);
+                    startActivity(mIntent);
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "url is not illigel", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btn3 = (Button)findViewById(R.id.button3);
+        btn3.setText("启动江苏广电盒子引导页");
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String urlcontent = "http://beta.webapp.skysrt.com/lxw/guide2/index.html";
+                Log.i(mTag,"onClick!!! url = " + urlcontent);
+                if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
+                {
+                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mIntent.putExtra("url", urlcontent);
+                    mIntent.putExtra("mode", 1);
+                    mIntent.putExtra("cache", mIsChecked);
+                    startActivity(mIntent);
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "url is not illigel", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btn4 = (Button)findViewById(R.id.button4);
+        btn4.setText("启动长图宣传页");
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String urlcontent = "http://beta.webapp.skysrt.com/lxw/ceshi/nfc2/index.html";
+                Log.i(mTag,"onClick!!! url = " + urlcontent);
+                if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
+                {
+                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mIntent.putExtra("url", urlcontent);
+                    mIntent.putExtra("mode", 1);
+                    mIntent.putExtra("cache", mIsChecked);
                     startActivity(mIntent);
                 }
                 else

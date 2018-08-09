@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="skyworth.cordova_skyworth_hybrid_demo">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -10,15 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
         <activity
             android:name=".WebViewActivity"
+            android:launchMode="standard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="com.coocaa.webview.test" />
@@ -26,14 +32,33 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".CordovaExtWebViewActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <action android:name="com.coocaa.webview.test1" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        <!--<activity-->
+            <!--android:name=".CordovaExtWebViewActivity"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.coocaa.webview.test1" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<activity-->
+            <!--android:name=".WebViewActivity2"-->
+            <!--android:hardwareAccelerated="true"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.coocaa.webview.test2" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<service-->
+            <!--android:name=".MainService"-->
+            <!--android:exported="true"-->
+            <!--android:enabled="true" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.action.webview.service" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
     </application>
 
 </manifest>

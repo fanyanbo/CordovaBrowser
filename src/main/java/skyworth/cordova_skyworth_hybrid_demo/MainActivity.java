@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
                 Log.i(mTag,"onClick!!! url = " + urlcontent);
                 if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
                 {
-                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    Intent mIntent = new Intent("com.intent.action.jsbridge");
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mIntent.putExtra("url", urlcontent);
                     mIntent.putExtra("mode", 0);
@@ -97,7 +97,7 @@ public class MainActivity extends Activity {
                 Log.i(mTag,"onClick!!! url = " + urlcontent);
                 if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
                 {
-                    Intent mIntent = new Intent("com.coocaa.webview.test");
+                    Intent mIntent = new Intent("com.intent.action.cordova");
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mIntent.putExtra("url", urlcontent);
                     mIntent.putExtra("mode", 0);

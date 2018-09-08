@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="skyworth.cordova_skyworth_hybrid_demo.MainActivity">
+    tools:context="skyworth.cc.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"

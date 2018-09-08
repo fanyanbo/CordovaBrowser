@@ -1,4 +1,4 @@
-package skyworth.cordova_skyworth_hybrid_demo;
+package skyworth.cc;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,11 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.skyworth.framework.skysdk.ipc.SkyActivity;
 import com.tianci.system.api.TCSystemService;
-import com.tianci.system.data.TCInfoSetData;
-import com.tianci.system.data.TCSetData;
-import com.tianci.system.define.TCEnvKey;
 
 public class MainActivity extends Activity {
 

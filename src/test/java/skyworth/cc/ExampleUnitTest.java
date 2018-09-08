@@ -1,4 +1,4 @@
-package skyworth.cordova_skyworth_hybrid_demo;
+package skyworth.cc;
 
 import org.junit.Test;
 

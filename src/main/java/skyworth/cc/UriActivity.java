@@ -1,12 +1,10 @@
-package skyworth.cordova_skyworth_hybrid_demo;
+package skyworth.cc;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-
-import org.apache.cordova.CordovaExtActivity;
 
 /**
  * Created by fanyanbo on 2018/8/24.

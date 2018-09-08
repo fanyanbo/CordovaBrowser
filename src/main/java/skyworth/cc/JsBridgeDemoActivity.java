@@ -1,4 +1,4 @@
-package skyworth.cordova_skyworth_hybrid_demo;
+package skyworth.cc;
 
 import android.os.Bundle;
 import android.util.Log;
